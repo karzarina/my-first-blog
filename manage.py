@@ -5,6 +5,10 @@ import sys
 
 
 def main():
+    import requests
+    r = requests.get("https://api64.ipify.org/?format=json")
+    print(r.json()["ip"])
+
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
     try:
